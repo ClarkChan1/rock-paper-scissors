@@ -1,0 +1,18 @@
+.button-group{
+  background-color: pink;
+  display:flex;
+  flex-direction:row;
+  justify-content: center;
+  gap:50px;
+}
+
+.rock, .paper, .scissors{
+  display:flex;
+  flex-direction:column;
+}
+
+.scoreboard{
+  background-color: teal;
+  color:white;
+  
+}
