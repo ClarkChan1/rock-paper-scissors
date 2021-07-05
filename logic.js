@@ -23,41 +23,35 @@ function playRound(playerSelection, computerSelection) {
   // win conditions
   if (playerSelection == "ROCK" && computerSelection == "SCISSORS") {
     playerScore++;
-    console.log("YOU WIN! Rock beats Scissors");
-    console.log(`your score: ${playerScore}, computer score: ${computerScore}`);
+    scoreboard.innerHTML = "YOU WIN! Rock beats Scissors\n" + `your score: ${playerScore}, computer score: ${computerScore}`;
   }
   if (playerSelection == "PAPER" && computerSelection == "ROCK") {
     playerScore++;
-    console.log("YOU WIN! Paper beats Rock");
-    console.log(`your score: ${playerScore}, computer score: ${computerScore}`);
+    scoreboard.innerHTML = "YOU WIN! Paper beats Rock\n" + `your score: ${playerScore}, computer score: ${computerScore}`;
   }
   if (playerSelection == "SCISSORS" && computerSelection == "PAPER") {
     playerScore++;
-    console.log("YOU WIN! Scissors beats Paper");
-    console.log(`your score: ${playerScore}, computer score: ${computerScore}`);
+    scoreboard.innerHTML = "YOU WIN! Scissors beats Paper\n" + `your score: ${playerScore}, computer score: ${computerScore}`;
   }
 
   // lose conditions
   if (playerSelection == "ROCK" && computerSelection == "PAPER") {
     computerScore++;
-    console.log("YOU LOSE! Paper beats Rock");
-    console.log(`your score: ${playerScore}, computer score: ${computerScore}`);
+    scoreboard.innerHTML = "YOU LOSE! Paper beats Rock\n" + `your score: ${playerScore}, computer score: ${computerScore}`;
   }
   if (playerSelection == "PAPER" && computerSelection == "SCISSORS") {
     computerScore++;
-    console.log("YOU LOSE! Scissors beats Paper");
-    console.log(`your score: ${playerScore}, computer score: ${computerScore}`);
+    scoreboard.innerHTML = "YOU LOSE! Scissors beats Paper\n" + `your score: ${playerScore}, computer score: ${computerScore}`;
+
   }
   if (playerSelection == "SCISSORS" && computerSelection == "ROCK") {
     computerScore++;
-    console.log("YOU LOSE! Rock beats Scissors");
-    console.log(`your score: ${playerScore}, computer score: ${computerScore}`);
+    scoreboard.innerHTML = "YOU LOSE! Rock beats Scissors\n" + `your score: ${playerScore}, computer score: ${computerScore}`;
   }
 
   // tie conditions
   if (playerSelection == "SCISSORS" && computerSelection == "SCISSORS" || playerSelection == "ROCK" && computerSelection == "ROCK" || playerSelection == "PAPER" && computerSelection == "PAPER") {
-    console.log("Tie Game!");
-    console.log(`your score: ${playerScore}, computer score: ${computerScore}`);
+    scoreboard.innerHTML = "Tie Game!\n" + `your score: ${playerScore}, computer score: ${computerScore}`;
   }
 }
 
@@ -66,10 +60,10 @@ function checkScore() {
     return;
   }
   if (playerScore == 5) {
-    scoreboard.innerHTML = "You WIN!";
+    scoreboard.innerHTML = "You WIN!\n" + `your score: ${playerScore}, computer score: ${computerScore}\n` + "Click Rock, Paper, or Scissors to play again!";
   }
   if (computerScore == 5) {
-    scoreboard.innerHTML = "You LOSE!";
+    scoreboard.innerHTML = "You LOSE!\n" + `your score: ${playerScore}, computer score: ${computerScore}\n` + "Click Rock, Paper, or Scissors to play again!";
   }
   // reset scores and display the play again button and remove the other buttons until the user clicks play agian
   playerScore = 0;
@@ -78,7 +72,7 @@ function checkScore() {
 }
 
 // customize all buttons
-let buttonGroup = document.querySelector(".button-group");
+let buttonGroup = document.querySelector(".button-and-image-group");
 console.log(buttonGroup.childNodes);
 
 // get all the buttons and save them as variables
@@ -91,7 +85,7 @@ let computerSelection;
 
 // variable for the scoreboard
 let scoreboard = document.querySelector('.score');
-scoreboard.innerHTML = "this is the score";
+scoreboard.innerHTML = "Click Rock, Paper, or Scissors to play!\n"+ `your score: ${playerScore}, computer score: ${computerScore}`;
 
 // make the play again button
 let playAgainButton = document.createElement("button");
