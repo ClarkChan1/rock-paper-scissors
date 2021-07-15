@@ -18,25 +18,10 @@ html, body{
   gap: 75px;
 }
 
-.rock, .paper, .scissors {
-  display: flex;
-  gap:30px;
-  flex-direction: column;
-  align-items: center;
-  justify-content:center;
-}
-
-.rock-button, .paper-button, .scissors-button{
-  background-color:rgb(0, 113, 205);
-  font-size:36px;
-  color:white;
-  border:none;
-  padding: 10px;
-  border-radius:10px;
-}
 
 .rock-button:hover, .paper-button:hover, .scissors-button:hover{
-  background-color:rgb(56, 159, 244);
+  background-color: white;
+  transform:scale(1.2);
 }
 
 .scoreboard {
