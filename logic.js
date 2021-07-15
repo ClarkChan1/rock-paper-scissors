@@ -71,7 +71,7 @@ function playRound(playerSelection, computerSelection) {
 
   // tie conditions
   if (playerSelection == "SCISSORS" && computerSelection == "SCISSORS" || playerSelection == "ROCK" && computerSelection == "ROCK" || playerSelection == "PAPER" && computerSelection == "PAPER") {
-    scoreboard.innerHTML = "Tie Game!\n" + `your score: ${playerScore}, Computer score: ${computerScore}`;
+    scoreboard.innerHTML = "Tie Game!\n" + `Your score: ${playerScore}, Computer score: ${computerScore}`;
   }
 }
 
